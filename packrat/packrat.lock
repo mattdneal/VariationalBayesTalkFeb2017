@@ -1,0 +1,14 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.8.1
+RVersion: 3.3.2
+Repos: CRAN=https://cran.rstudio.com/
+
+Package: MASS
+Source: CRAN
+Version: 7.3-45
+Hash: 0650d5701aa7e369e77c9e2c8e1dc913
+
+Package: packrat
+Source: CRAN
+Version: 0.4.8-1
+Hash: 6ad605ba7b4b476d84be6632393f5765
