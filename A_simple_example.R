@@ -1,5 +1,4 @@
 # A simple example
-
 iterate <- function(par, hyperpar, X) {
   l0 <- hyperpar$l0
   m0 <- hyperpar$m0
@@ -61,7 +60,13 @@ plot_contour <- function(par) {
   grange <- seq(grange[1], grange[2], length.out=100)
   coords <- as.matrix(expand.grid(nrange, grange))
   z <- matrix(q(coords, par), 100)
-  contour(x=nrange, y=grange, z=z, xlab="Mean", ylab="Precision")
+  
+  if (require(viridis)) {
+    col <- viridis(10)
+  } else {
+    col <- rainbow(10)
+  }
+  contour(x=nrange, y=grange, z=z, xlab="Mean", ylab="Precision", col=col, nlevels = 10)
 }
 
 plot_prior <- function(hyperpar) {
